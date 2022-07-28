@@ -7,15 +7,15 @@ pipeline {
       }
     }
 
-    stage('terraform format check') {
+    stage('terraform init') {
       steps {
-        sh 'sh \'terraform validate\''
+        sh 'sh \'terraform init\''
       }
     }
 
-    stage('terraform Init') {
+    stage('terraform validate') {
       steps {
-        sh 'sh \'terraform init\''
+        sh 'sh \'terraform validate\''
       }
     }
 
