@@ -9,7 +9,7 @@ pipeline {
 
     stage('terraform format check') {
       steps {
-        sh 'sh \'terraform fmt\''
+        sh 'sh \'terraform validate\''
       }
     }
 
